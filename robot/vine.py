@@ -21,6 +21,6 @@ while True:
   else:
     i = random.randint (-1, 2)
     turn(i)
-      while look() == None:
-        move()
-      move()
+    while look() == None:
+     move()
+    move()
