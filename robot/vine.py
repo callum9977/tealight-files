@@ -17,6 +17,7 @@ while True:
       while look() == 'fruit':
         move()
   else:
+    
       while look() == None:
         move()
       move()
