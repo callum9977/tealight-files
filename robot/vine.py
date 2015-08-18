@@ -25,6 +25,6 @@ while n<2000:
       turn(i)
       move()
   else:
-    i = random.randint (-1, 2)
-      turn(i)
+      i = random.randint (-1, 2)
+      turn(i) 
       move()
