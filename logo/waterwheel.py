@@ -2,9 +2,9 @@ from tealight.logo import move, turn
 
 
 def square(side):
-  for i in range(0,3):
+  for i in range(0,4):
     move(side)
-    turn(180)
+    turn(90)
 
 def waterwheel(edges, size):
   angle = 360 / edges
