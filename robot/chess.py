@@ -6,6 +6,6 @@ from tealight.robot import (move,
                             left_side, 
                             right_side)
 
-distance = 50
+distance = 30
 for n in range (0,distance):
   move()
