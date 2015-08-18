@@ -21,4 +21,4 @@ while True:
   else:
     i = random.randint (-1, 2)
     turn(i)
-    move()
+    10*move()
