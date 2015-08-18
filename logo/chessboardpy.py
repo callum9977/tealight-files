@@ -15,7 +15,7 @@ def line_squares(number,size):
 
 def grid(number,size):
   for i in range(number):
-    if (i!=number):
+    if (i!=(number-1)):
       line_squares(number,size)
       turn(-90)
       move(size*number)
