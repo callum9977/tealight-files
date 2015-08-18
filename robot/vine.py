@@ -7,7 +7,9 @@ from tealight.robot import (move,
                             smell, 
                             left_side, 
                             right_side)
-while True:
+n=0
+while n<2000:
+  n = n+1
   if look() == 'fruit':
     move()
   elif right_side() == 'fruit':
