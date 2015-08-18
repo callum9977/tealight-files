@@ -19,6 +19,6 @@ while True:
   else:
     turn(1)
     move()
-    move()
-    move()
+    while look() == None:
+      move()
     
