@@ -4,5 +4,8 @@ def polygon(edges, size):
   for i in range(0, edges):
     move(size)
     turn(angle)
-    
+
+def line_squares(number,size):
+  for i in range(number):
+    polygon(4,size)
 polygon(4,100)
