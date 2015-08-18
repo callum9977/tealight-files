@@ -20,7 +20,7 @@ while n<2000:
       turn(1)
       while look() == 'fruit':
         move()
-  elif:
+  else:
     while smell() >= 1:
       i = random.randint (-1, 2)
       turn(i)
