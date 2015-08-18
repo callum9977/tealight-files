@@ -11,4 +11,4 @@ def line_squares(number,size):
     turn(90)
     move(size)
     turn(-90)
-line_squares(8,90)
+line_squares(8,45)
