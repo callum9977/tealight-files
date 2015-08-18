@@ -13,7 +13,7 @@ while look() == 'fruit':
       
 move()
 turn(1)
-while look() == None:
+while look() == 'None':
   move()
 while look == 'fruit':
   move()
