@@ -21,4 +21,4 @@ def grid(number,size):
     turn(-90)
     move(size)
     turn(180)
-grid(8,45)
+grid(8,30)
