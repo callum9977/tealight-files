@@ -13,3 +13,8 @@ turn(1)
 
 while look() == 'fruit':
     move()
+    
+while look() == 'fruit':
+    move()
+    
+turn(1)
