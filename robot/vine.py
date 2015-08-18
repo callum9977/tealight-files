@@ -19,4 +19,5 @@ while True:
   else:
     turn(1)
     move()
+    move()
     
