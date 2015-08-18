@@ -19,7 +19,7 @@ while True:
       while look() == 'fruit':
         move()
   else:
-    while smell() => 1:
+    while smell() >= 1:
       i = random.randint (-1, 2)
       turn(i)
       move()
