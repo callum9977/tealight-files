@@ -21,4 +21,4 @@ while True:
     move()
     while look() == None:
       move()
-    
+    move()
