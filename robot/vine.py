@@ -1,3 +1,5 @@
+import random
+
 from tealight.robot import (move, 
                             turn, 
                             look, 
