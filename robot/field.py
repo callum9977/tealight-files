@@ -8,13 +8,13 @@ from tealight.robot import (move,
 while True:
   if look() == 'fruit':
     move
-   elif right_side()=='fruit':
+   elif right_side() == 'fruit':
       turn(1)
-      while look()=='fruit':
+      while look() == 'fruit':
         move()
-  elif left_side()=='fruit':
+  elif left_side() == 'fruit':
       turn(1)
-      while look()=='fruit':
+      while look() == 'fruit':
         move()
   else:
     turn(1)
