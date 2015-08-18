@@ -19,7 +19,7 @@ while True:
       while look() == 'fruit':
         move()
   else:
-    i = randint (-1, 2)
+    i = random.randint (-1, 2)
     turn(i)
       while look() == None:
         move()
