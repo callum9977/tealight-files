@@ -10,4 +10,5 @@ def line_squares(number,size):
     polygon(4,size)
     turn(90)
     move(size)
+    turn(-90)
 line_squares(8,90)
