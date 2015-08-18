@@ -8,4 +8,4 @@ def polygon(edges, size):
 def line_squares(number,size):
   for i in range(number):
     polygon(4,size)
-polygon(4,100)
+line_squares(8,90)
