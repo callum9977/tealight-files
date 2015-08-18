@@ -6,6 +6,5 @@ from tealight.robot import (move,
                             left_side, 
                             right_side)
 
-distance = 32
-for n in range (0,distance):
+for look == 'fruit':
   move()
