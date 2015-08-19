@@ -26,7 +26,7 @@ def handle_keydown(key):
   elif key == "down":
     ay = power
    
-  power = power*(1-gravity)
+  ay = power*(1-gravity)
  
 def handle_keyup(key):
   global ax, ay
