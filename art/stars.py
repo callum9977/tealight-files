@@ -6,11 +6,11 @@ def star(x, y, c, size, spines):
   
   color(c)
   
-  angle = 0
+  angle = 
   
   for i in range(0, spines):
-    x0 =  (size * cos(angle))
-    y0 =  (size * sin(angle))
+    x0 = x + (size * cos(angle))
+    y0 = y + (size * sin(angle))
     
     line(x, y, x0, y0)
     
