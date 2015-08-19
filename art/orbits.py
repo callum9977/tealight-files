@@ -14,7 +14,7 @@ ay = gravity
 power = 0.3
 
 def handle_keydown(key):
-  global ax, ay
+  global ax, ay, power
   
 
   if key == "left":
