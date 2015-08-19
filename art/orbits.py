@@ -10,6 +10,8 @@ ax = 0
 ay = 0
 
 power = 0.3
+while True:
+  ay = power
 
 def handle_keydown(key):
   global ax, ay
