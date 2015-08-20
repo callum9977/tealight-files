@@ -3,9 +3,10 @@ from random import randrange
 from math import floor
 from tealight.art import (color, line, spot, circle, box, image, text, background)
 color('white')
+score = 0
+
 text(50,800, score)
 box(0,0,1000,1000)
-score = 0
 
 #this makes the grid
 def makegrid():
