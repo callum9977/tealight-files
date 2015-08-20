@@ -93,3 +93,20 @@ def uncover(boxX, boxY, score):
        
  
 color('black')
+ 
+ 
+#this is where the program starts
+makegrid()
+ 
+mine = []
+for i in range(0, 121):
+  mine.append(0)
+ 
+for i in range(0,15):
+  b=0
+  while b==0:
+    x=randrange(0,9,1)
+    y=randrange(0,9,1)
+    if get(mine, x, y) == 0:
+      setbox(mine,x,y,1)
+      b=1
