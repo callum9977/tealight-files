@@ -4,7 +4,7 @@ from math import floor
 from tealight.art import (color, line, spot, circle, box, image, text, background)
 color('white')
 score = 0
-color('redblack')
+color('red')
 text(50,800, score)
 box(0,0,1000,1000)
 
