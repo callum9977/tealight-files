@@ -1,5 +1,5 @@
 from tealight.art import (color, line, spot, circle, box, image, text, background)
-def makegrid:
+def makegrid():
   for j in range(0,10):
     for i in range(0,10):
        if ((i+j) % 2) != 1:
