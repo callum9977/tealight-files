@@ -1,10 +1,11 @@
 import random
-import sys
 from random import randrange
 from math import floor
 from tealight.art import (color, line, spot, circle, box, image, text, background)
 score=0
 ingame=1
+color('white')
+box(0,0,1000,1000)
 color("black")
 text(0, 600,"Score: "+str(score))
  
@@ -70,6 +71,7 @@ def uncover(boxX, boxY):
     box(0,600,500,50)
     color("black")
     text(0, 600,"Final score: "+str(score))
+    text(500,600, "You Lost!")
   if get(mine, boxX, boxY)==0:
     color('white')
     box(boxX*60,boxY*60,50,50)
@@ -114,13 +116,7 @@ def uncover(boxX, boxY):
             uncover(boxX, boxY -1)
             uncover(boxX +1, boxY)
  
-     
- 
-   
-       
- 
 color('black')
- 
  
 #this is where the program starts
 makegrid()
