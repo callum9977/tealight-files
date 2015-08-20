@@ -46,22 +46,24 @@ def handle_mousedown(x, y):
   global score
   boxX = floor(x/60)
   boxY = floor(y/60)
-  print boxY, boxX
-  print get(mine, boxX, boxY)
-  if get(mine, boxX, boxY)==1:
-    color('red')
-    box(boxX*60,boxY*60,50,50)
-  if get(mine, boxX, boxY)==0:
-    color('white')
-    box(boxX*60,boxY*60,50,50)
-    setbox(mine,boxX,boxY,2)
-    print getSurroundingMines(boxX,boxY)
-    score+=1
-    color("white")
-    box(0,600,500,50)
-    color("black")
-    text(0, 600,"Score: "+str(score))
- 
+  if boxX<10:
+    if boxY<10:
+      print boxY, boxX
+      print get(mine, boxX, boxY)
+      if get(mine, boxX, boxY)==1:
+        color('red')
+        box(boxX*60,boxY*60,50,50)
+      if get(mine, boxX, boxY)==0:
+        color('white')
+        box(boxX*60,boxY*60,50,50)
+        setbox(mine,boxX,boxY,2)
+        print getSurroundingMines(boxX,boxY)
+        score+=1
+        color("white")
+        box(0,600,500,50)
+        color("black")
+        text(0, 600,"Score: "+str(score))
+   
 color('black')
  
  
