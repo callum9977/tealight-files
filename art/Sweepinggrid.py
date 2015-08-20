@@ -2,6 +2,8 @@ import random
 from random import randrange
 from math import floor
 from tealight.art import (color, line, spot, circle, box, image, text, background)
+color('white')
+box(0,0,1000,1000)
  
  
 #this makes the grid
@@ -16,30 +18,54 @@ def makegrid():
  
 #this gets the information about a box from the corresponding list
 def get(A, x, y):
-  position = (10*(y))+x
+  position = (11*(y))+x
   return A[position]
  
 #this sets the information about a box to the corresponding lis
 def setbox(A, x, y, val):
-  position = (10*(y))+x
+  position = (11*(y))+x
   A[position] = val
  
-#this ffinds which box is clicked
+#Determines numbers
+def getSurroundingMines(x, y):
+  surround = 0
+  global mine
+  for i in range(-1,2):
+    for j in range(-1, 2):
+      surround=surround+get(mine, x+i, y+j)
+  color('black')
+  if surround>0:
+    text(x*60 + 17, y*60 + 20 , surround)
+  return surround
+ 
+#this finds which box is clicked
 def handle_mousedown(x, y):
   boxX = floor(x/60)
   boxY = floor(y/60)
   print boxY, boxX
   print get(mine, boxX, boxY)
+  if get(mine, boxX, boxY)==1:
+    color('red')
+    box(boxX*60,boxY*60,50,50)
+  if get(mine, boxX, boxY)==0:
+    color('white')
+    box(boxX*60,boxY*60,50,50)
+    print getSurroundingMines(boxX,boxY)
+   
  
  
 #this is where the program starts
 makegrid()
  
 mine = []
-for i in range(0, 100):
+for i in range(0, 121):
   mine.append(0)
  
 for i in range(0,15):
-  x=randrange(0,9,1)
-  y=randrange(0,9,1)
-  setbox(mine,x,y,1)
+  b=0
+  while b==0:
+    x=randrange(0,9,1)
+    y=randrange(0,9,1)
+    if get(mine, x, y) == 0:
+      setbox(mine,x,y,1)
+      b=1
