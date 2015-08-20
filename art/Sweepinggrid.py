@@ -46,6 +46,7 @@ def handle_mousedown(x, y):
   if get(mine, boxX, boxY)==1:
     color('red')
     box(boxX*60,boxY*60,50,50)
+    while True
   if get(mine, boxX, boxY)==0:
     color('white')
     box(boxX*60,boxY*60,50,50)
