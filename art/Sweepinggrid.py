@@ -4,7 +4,7 @@ from math import floor
 from tealight.art import (color, line, spot, circle, box, image, text, background)
 color('white')
 box(0,0,1000,1000)
-global score = 0
+int global score = 0
 #this makes the grid
 def makegrid():
   for j in range(0, 10):
