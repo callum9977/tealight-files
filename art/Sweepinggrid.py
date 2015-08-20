@@ -1,12 +1,14 @@
 import random
+import sys
 from random import randrange
 from math import floor
 from tealight.art import (color, line, spot, circle, box, image, text, background)
+score=0
 color('white')
-score = 0
-text(50,800, score)
 box(0,0,1000,1000)
-
+color("black")
+text(0, 600,"Score: "+str(score))
+ 
 #this makes the grid
 def makegrid():
   for j in range(0, 10):
@@ -52,12 +54,15 @@ def handle_mousedown(x, y):
   if get(mine, boxX, boxY)==0:
     color('white')
     box(boxX*60,boxY*60,50,50)
+    setbox(mine,boxX,boxY,2)
     print getSurroundingMines(boxX,boxY)
-    score = score+1
-    print(score)
-    
-    
-   
+    score+=1
+    color("white")
+    box(0,600,500,50)
+    color("black")
+    text(0, 600,"Score: "+str(score))
+ 
+color('black')
  
  
 #this is where the program starts
