@@ -4,8 +4,7 @@ from random import randrange
 from math import floor
 from tealight.art import (color, line, spot, circle, box, image, text, background)
 score=0
-color('white')
-box(0,0,1000,1000)
+ingame=1
 color("black")
 text(0, 600,"Score: "+str(score))
  
@@ -50,42 +49,47 @@ def handle_mousedown(x, y,button):
   boxY = floor(y/60)
   if boxX<10:
     if boxY<10:
-      if button=="left":
-        print boxY, boxX
-        print get(mine, boxX, boxY)
-        if get(mine, boxX, boxY)==1:
-          color('red')
-          box(boxX*60,boxY*60,50,50)
-        if get(mine, boxX, boxY)==0:
-          color('white')
-          box(boxX*60,boxY*60,50,50)
-          setbox(mine,boxX,boxY,2)
-          print getSurroundingMines(boxX,boxY)
-          score+=1
-          color("white")
-          box(0,600,500,50)
-          color("black")
-          text(0, 600,"Score: "+str(score))
-      if button=="right"and get(mine, boxX, boxY)!=2:
-        color("green")
-        spot(boxX*60 +25 ,boxY*60 + 25,10)
+      if ingame == 1:
+        if button=="left":
+          uncover(boxX, boxY, score)
+        if button=="right"and get(mine, boxX, boxY)!=2:
+          color("green")
+          spot(boxX*60 +25 ,boxY*60 + 25,10)
  
+def uncover(boxX, boxY, score):
+  global ingame
+  global mine
+  print boxY, boxX
+  print get(mine, boxX, boxY)
+  if get(mine, boxX, boxY)==1:
+    color('red')
+    box(boxX*60,boxY*60,50,50)
+    ingame=0
+    color("white")
+    box(0,600,500,50)
+    color("black")
+    text(0, 600,"Final score: "+str(score))
+  if get(mine, boxX, boxY)==0:
+    color('white')
+    box(boxX*60,boxY*60,50,50)
+    setbox(mine,boxX,boxY,2)
+    end =  getSurroundingMines(boxX,boxY)
+    score+=1
+    color("white")
+    box(0,600,500,50)
+    color("black")
+    text(0, 600,"Score: "+str(score))
+    if end == 0:
+      if boxX<9:
+        if boxY<9:
+          if boxX>0:
+            if boxY>0:
+              uncover(boxX +1, boxY, score)
+              uncover(boxX -1, boxY, score)
+              uncover(boxX, boxY +1, score)
+              uncover(boxX, boxY -1, score)
+ 
+   
+       
  
 color('black')
- 
- 
-#this is where the program starts
-makegrid()
- 
-mine = []
-for i in range(0, 121):
-  mine.append(0)
- 
-for i in range(0,15):
-  b=0
-  while b==0:
-    x=randrange(0,9,1)
-    y=randrange(0,9,1)
-    if get(mine, x, y) == 0:
-      setbox(mine,x,y,1)
-      b=1
