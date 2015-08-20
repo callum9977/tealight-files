@@ -56,8 +56,8 @@ def handle_mousedown(x, y):
       if get(mine, boxX, boxY)==0:
         color('white')
         box(boxX*60,boxY*60,50,50)
-        setbox(mine,boxX,boxY,2)
         print getSurroundingMines(boxX,boxY)
+        setbox(mine,boxX,boxY,2)
         score+=1
         color("white")
         box(0,600,500,50)
