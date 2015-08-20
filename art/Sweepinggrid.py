@@ -57,6 +57,16 @@ def handle_mousedown(x, y,button):
           color("green")
           spot(boxX*60 +25 ,boxY*60 + 25,10)
  
+def findMines():
+  global mine
+  for i in range(0, 10):
+    for j in range(0, 10):
+      if get(mine, i, j) == 1:
+        color('red')
+        box(i*60,j*60,50,50)
+       
+   
+ 
 def uncover(boxX, boxY):
   global score
   global ingame
@@ -72,6 +82,7 @@ def uncover(boxX, boxY):
     color("black")
     text(0, 600,"Final score: "+str(score))
     text(500,600, "You Lost!")
+    findMines()
   if get(mine, boxX, boxY)==0:
     color('white')
     box(boxX*60,boxY*60,50,50)
@@ -82,8 +93,10 @@ def uncover(boxX, boxY):
     box(0,600,500,50)
     color("black")
     text(0, 600,"Score: "+str(score))
-    if score==93:
+    if score==85:
+      score = 100
       ingame=0
+      color("white")
       box(0,600,500,50)
       color("black")
       text(0, 600,"Final score: "+str(score))
@@ -147,6 +160,9 @@ makegrid()
 mine = []
 for i in range(0, 121):
   mine.append(0)
+for i in range(1, 12):
+  mine[(11*i)-1]=2
+  mine[109+i]=2
  
 for i in range(0,15):
   b=0
