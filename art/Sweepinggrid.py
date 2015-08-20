@@ -5,7 +5,7 @@ for j in range(0,10):
      if ((i+j) % 2) != 1:
       color("black")
      else:
-      color("white")
+      color("blue")
      box(i*60, j*60, 50, 50)
     
     
