@@ -82,6 +82,12 @@ def uncover(boxX, boxY):
     box(0,600,500,50)
     color("black")
     text(0, 600,"Score: "+str(score))
+    if score==93:
+      ingame=0
+      box(0,600,500,50)
+      color("black")
+      text(0, 600,"Final score: "+str(score))
+      text(500,600, "You WIN!")
     if end == 0:
       if boxX<9:
         if boxY<9:
@@ -115,6 +121,23 @@ def uncover(boxX, boxY):
             uncover(boxX, boxY +1)
             uncover(boxX, boxY -1)
             uncover(boxX +1, boxY)
+      if boxX == 0:
+        if boxY == 9:
+          uncover(boxX, boxY -1)
+          uncover(boxX +1, boxY)
+      if boxX == 9:
+        if boxY == 0:
+          uncover(boxX, boxY +1)
+          uncover(boxX -1, boxY)
+      if boxX == 0:
+        if boxY == 0:
+          uncover(boxX, boxY +1)
+          uncover(boxX +1, boxY)
+      if boxX == 9:
+        if boxY == 9:
+          uncover(boxX, boxY -1)
+          uncover(boxX -1, boxY)
+ 
  
 color('black')
  
