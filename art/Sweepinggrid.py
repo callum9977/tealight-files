@@ -7,6 +7,7 @@ def makegrid():
        else:
         color("blue")
        box(i*60, j*60, 50, 50)
+makegrid()
     
     
   
