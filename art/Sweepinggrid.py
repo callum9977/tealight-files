@@ -4,7 +4,7 @@ from math import floor
 from tealight.art import (color, line, spot, circle, box, image, text, background)
 color('white')
 box(0,0,1000,1000)
-
+score = 0
 #this makes the grid
 def makegrid():
   for j in range(0, 10):
@@ -50,6 +50,8 @@ def handle_mousedown(x, y):
     color('white')
     box(boxX*60,boxY*60,50,50)
     print getSurroundingMines(boxX,boxY)
+    score = score+1
+    print(score)
    
  
  
