@@ -5,7 +5,7 @@ from tealight.art import (color, line, spot, circle, box, image, text, backgroun
 color('white')
 box(0,0,1000,1000)
 score = 0
-text(50,700, score)
+text(50,750, score)
 #this makes the grid
 def makegrid():
   for j in range(0, 10):
