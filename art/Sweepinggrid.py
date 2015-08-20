@@ -3,6 +3,7 @@ from random import randrange
 from math import floor
 from tealight.art import (color, line, spot, circle, box, image, text, background)
 color('white')
+text(50,800, score)
 box(0,0,1000,1000)
 score = 0
 
@@ -54,7 +55,7 @@ def handle_mousedown(x, y):
     print getSurroundingMines(boxX,boxY)
     score = score+1
     print(score)
-    text(50,800, score)
+    
     
    
  
