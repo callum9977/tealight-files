@@ -4,7 +4,7 @@ from math import floor
 from tealight.art import (color, line, spot, circle, box, image, text, background)
 color('white')
 box(0,0,1000,1000)
- 
+import sys
  
 #this makes the grid
 def makegrid():
@@ -47,6 +47,7 @@ def handle_mousedown(x, y):
   if get(mine, boxX, boxY)==1:
     color('red')
     box(boxX*60,boxY*60,50,50)
+    sys.exit()
   if get(mine, boxX, boxY)==0:
     color('white')
     box(boxX*60,boxY*60,50,50)
