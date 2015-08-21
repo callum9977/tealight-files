@@ -173,8 +173,8 @@ for i in range(1, 12):
 for i in range(0,50):
   b=0
   while b==0:
-    x=randrange(0,9,1)
-    y=randrange(0,9,1)
+    x=randrange(0,10,1)
+    y=randrange(0,10,1)
     if get(mine, x, y) == 0:
       setbox(mine,x,y,1)
       b=1
