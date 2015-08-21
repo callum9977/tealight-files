@@ -71,8 +71,6 @@ def uncover(boxX, boxY):
   global score
   global ingame
   global mine
-  print boxY, boxX
-  print get(mine, boxX, boxY)
   if get(mine, boxX, boxY)==1:
     color('red')
     box(boxX*60,boxY*60,50,50)
