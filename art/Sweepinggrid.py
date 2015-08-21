@@ -162,7 +162,7 @@ def getscore():
   return score
  
 makegrid()
- 
+print("Welcome to Minesweeper!")
 mine = []
 for i in range(0, 121):
   mine.append(0)
