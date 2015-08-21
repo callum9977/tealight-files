@@ -170,7 +170,7 @@ for i in range(1, 12):
   mine[(11*i)-1]=2
   mine[109+i]=2
  
-for i in range(0,15):
+for i in range(0,99):
   b=0
   while b==0:
     x=randrange(0,9,1)
