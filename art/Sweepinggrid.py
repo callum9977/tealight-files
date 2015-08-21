@@ -88,7 +88,7 @@ def uncover(boxX, boxY):
     box(boxX*60,boxY*60,50,50)
     setbox(mine,boxX,boxY,2)
     end =  getSurroundingMines(boxX,boxY)
-    score+=1
+    score = getscore()
     color("white")
     box(0,600,500,50)
     color("black")
@@ -155,6 +155,14 @@ def uncover(boxX, boxY):
 color('black')
  
 #this is where the program starts
+def getscore():
+  score = 0
+  for i in range(0, 10):
+    for j in range(0, 10):
+      if get(mine, i, j) == 2:
+        score = score + 1
+  return score
+ 
 makegrid()
  
 mine = []
